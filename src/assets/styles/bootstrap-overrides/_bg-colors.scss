@@ -3,3 +3,21 @@
   background-color: $primary !important;
   /* stylelint-enable */
 }
+
+.bg-secondary {
+  /* stylelint-disable */
+  background-color: $secondary !important;
+  /* stylelint-enable */
+}
+
+.bg-tertiary {
+  /* stylelint-disable */
+  background-color: $tertiary !important;
+  /* stylelint-enable */
+}
+
+.bg-grey {
+  /* stylelint-disable */
+  background-color: $text-primary !important;
+  /* stylelint-enable */
+}
