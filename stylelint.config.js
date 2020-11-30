@@ -38,8 +38,7 @@ module.exports = {
     "selector-max-universal": 0,
     "selector-max-type": 1,
     "selector-no-qualifying-type": true,
-    "no-descending-specificity": true,
-    "max-nesting-depth": 0,
+    "max-nesting-depth": 1,
 
     //Value Units
     "length-zero-no-unit": true,
