@@ -32,7 +32,7 @@ module.exports = {
 
     //Specificity
     "declaration-no-important": true,
-    "selector-nested-pattern": "^&",
+    //    "selector-nested-pattern": "^&",
     "selector-max-specificity": "0,2,1",
     "selector-max-attribute": 1,
     "selector-max-universal": 0,
