@@ -87,6 +87,15 @@ main {
   grid-row: 3/4;
 }
 
+.no-grid-support {
+  /* stylelint-disable */
+  //exception made to specificity to style for no grid supporting browsers
+  .hero__heading:nth-of-type(2)::after {
+    width: 400%;
+    /* stylelint-enable */
+  }
+}
+
 .hero__heading:nth-of-type(2)::after {
   position: absolute;
   top: -90%;
@@ -120,6 +129,11 @@ main {
   display: none;
   grid-row: 1/4;
   align-self: end;
+  float: right; //fall-back for non grid support
+}
+
+.no-grid-support .hero__main-img-wrap {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -172,6 +186,10 @@ main {
   font-size: 2em;
   line-height: 1;
   text-align: end;
+}
+
+.no-grid-support .hero__date {
+  text-align: right;
 }
 
 .hero__secondary-img-wrap {
