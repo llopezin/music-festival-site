@@ -2,10 +2,15 @@ main {
   min-height: 60vh;
 }
 
+@supports (display: grid) {
+  .hero__wrap {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
 .hero__wrap {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr;
   max-height: 590px;
   margin: auto;
@@ -18,9 +23,14 @@ main {
 
 @media (min-width: 768px) {
   .hero__wrap {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1.5fr 1.5fr 1fr;
     max-height: 356px;
+  }
+
+  @supports (display: grid) {
+    .hero__wrap {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1.5fr 1fr;
+    }
   }
 }
 
@@ -76,15 +86,24 @@ main {
 }
 
 .hero__heading:nth-of-type(1) {
-  grid-row: 1/2;
   align-self: end;
 }
+
+@supports (display: grid) {
+  .hero__heading:nth-of-type(1) {
+    grid-row: 1/2;
+  }
+}
+
 .hero__heading:nth-of-type(2) {
   grid-row: 2/3;
   align-self: center;
 }
-.hero__heading:nth-of-type(3) {
-  grid-row: 3/4;
+
+@supports (display: grid) {
+  .hero__heading:nth-of-type(3) {
+    grid-row: 3/4;
+  }
 }
 
 .no-grid-support {
@@ -127,9 +146,14 @@ main {
 
 .hero__main-img-wrap {
   display: none;
-  grid-row: 1/4;
   align-self: end;
   float: right; //fall-back for non grid support
+}
+
+@supports (display: grid) {
+  .hero__main-img-wrap {
+    grid-row: 1/4;
+  }
 }
 
 .no-grid-support .hero__main-img-wrap {
@@ -193,10 +217,15 @@ main {
 }
 
 .hero__secondary-img-wrap {
-  grid-row: 5/6;
   justify-self: end;
   padding-top: 5px;
   padding-left: 5px;
+}
+
+@supports (display: grid) {
+  .hero__secondary-img-wrap {
+    grid-row: 5/6;
+  }
 }
 
 @media (min-width: 768px) {
