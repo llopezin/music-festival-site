@@ -12,7 +12,7 @@ module.exports = {
       },
     }),
     require("@fullhuman/postcss-purgecss")({
-      content: ["./**/*.html"],
+      content: ["./src/*.html"],
     }),
   ],
 };
